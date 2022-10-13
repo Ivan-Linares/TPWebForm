@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPWebForms_Linares_Falduti", "TPWebForms_Linares_Falduti.csproj", "{F8948755-14FD-4BD6-8141-5FC5D2F3052A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForms", "WebForms.csproj", "{F8948755-14FD-4BD6-8141-5FC5D2F3052A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reglas_Negocio", "Reglas_Negocio\Reglas_Negocio.csproj", "{F1D5F12F-6575-4F27-A01B-3933B41BB5A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio_Clases", "Dominio_Clases\Dominio_Clases.csproj", "{4019F0E0-ED20-423B-8394-03D7A49D1E3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F8948755-14FD-4BD6-8141-5FC5D2F3052A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8948755-14FD-4BD6-8141-5FC5D2F3052A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8948755-14FD-4BD6-8141-5FC5D2F3052A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1D5F12F-6575-4F27-A01B-3933B41BB5A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D5F12F-6575-4F27-A01B-3933B41BB5A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D5F12F-6575-4F27-A01B-3933B41BB5A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D5F12F-6575-4F27-A01B-3933B41BB5A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4019F0E0-ED20-423B-8394-03D7A49D1E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4019F0E0-ED20-423B-8394-03D7A49D1E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4019F0E0-ED20-423B-8394-03D7A49D1E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4019F0E0-ED20-423B-8394-03D7A49D1E3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
