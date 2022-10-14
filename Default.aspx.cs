@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Reglas_Negocio;
 
 namespace TPWebForms_Linares_Falduti
 {
@@ -11,7 +12,9 @@ namespace TPWebForms_Linares_Falduti
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Articulo_Negocio Articulo = new Articulo_Negocio();
+            GVArticulos.DataSource= Articulo.ListarArticulos();
+            GVArticulos.DataBind();
         }
     }
 }

@@ -12,9 +12,9 @@
 <body>
     <form id="form1" runat="server">
         <header>
-            <nav class="navbar navbar-expand-lg bg-dark">
+            <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
-                    <asp:HyperLink ID="HlBrand" CssClass="navbar-brand" NavigateUrl="~/Default.aspx" runat="server">TP WebForms</asp:HyperLink>
+                    <img src="Images/Logo.png" class="navbar-brand" alt="ImagenLogo" width="50"/>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">

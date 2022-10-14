@@ -106,6 +106,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Logo.png" />
     <Content Include="Script\bootstrap.bundle.js" />
     <Content Include="Script\bootstrap.bundle.min.js" />
     <Content Include="Script\bootstrap.esm.js" />
@@ -174,7 +175,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="Dominio_Clases\Dominio_Clases.csproj">
+      <Project>{4019f0e0-ed20-423b-8394-03d7a49d1e3c}</Project>
+      <Name>Dominio_Clases</Name>
+    </ProjectReference>
+    <ProjectReference Include="Reglas_Negocio\Reglas_Negocio.csproj">
+      <Project>{f1d5f12f-6575-4f27-a01b-3933b41bb5a5}</Project>
+      <Name>Reglas_Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
