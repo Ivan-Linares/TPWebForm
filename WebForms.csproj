@@ -108,6 +108,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\Logo.png" />
+    <Content Include="Images\PlaceHolder.png" />
     <Content Include="Script\bootstrap.bundle.js" />
     <Content Include="Script\bootstrap.bundle.min.js" />
     <Content Include="Script\bootstrap.esm.js" />
