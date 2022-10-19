@@ -16,6 +16,12 @@ namespace TPWebForms_Linares_Falduti
         {
             Articulo_Negocio ArticuloNegocio = new Articulo_Negocio();
             ListaArticulos = ArticuloNegocio.ListarArticulos();
+
+            if (!IsPostBack)
+            {
+                Repetidor.DataSource = ListaArticulos;
+                Repetidor.DataBind();
+            }
         }
     }
 }
