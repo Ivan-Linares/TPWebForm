@@ -24,6 +24,7 @@ namespace Reglas_Negocio
                 {
                     Articulo obj = new Articulo();
 
+
                     obj.ArticuloId = DataBase.Lector.GetInt32(0);
                     obj.Codigo = DataBase.Lector.GetString(1);
                     obj.Nombre = DataBase.Lector.GetString(2);
