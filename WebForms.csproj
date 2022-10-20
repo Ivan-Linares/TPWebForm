@@ -123,6 +123,7 @@
     <Content Include="Script\bootstrap.esm.min.js" />
     <Content Include="Script\bootstrap.js" />
     <Content Include="Script\bootstrap.min.js" />
+    <Content Include="Stilos\stilos.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
