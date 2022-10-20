@@ -9,7 +9,7 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <script src="Script/bootstrap.js"></script>
 </head>
-<body>
+<body  >
     <form id="form1" runat="server">
         <header>
             <nav class="navbar navbar-expand-lg bg-light">
@@ -25,7 +25,7 @@
                             </li>
                         </ul>
                         <div class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Filtro">
                             <button class="btn btn-outline-success" type="submit">Filtro</button>
                         </div>
                     </div>

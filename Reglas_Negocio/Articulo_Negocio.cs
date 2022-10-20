@@ -40,7 +40,7 @@ namespace Reglas_Negocio
 
                     obj.URLImagen = DataBase.Lector.GetString(8);
                     if(obj.URLImagen is null)
-                        obj.URLImagen= "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png";
+                   obj.URLImagen= "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png";
 
                     obj.Precio = DataBase.Lector.GetDecimal(9);
 
