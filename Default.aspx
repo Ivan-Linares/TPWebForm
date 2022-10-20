@@ -11,7 +11,7 @@
                                 <h5 class="card-title"><%#Eval("Nombre") %></h5>
                                 <img src="<%#Eval("URLImagen") %>" class="card-img-top" alt="Imagen URL" onerror="this.src='./Images/PlaceHolder.png';">
                                 <ul class="Descripcion-card">
-                                    <p class="card-Precio">$<%#Eval("Precio") %></p>
+                                    <p class="card-Precio">$<%#Eval("Precio") %></p> 
                                 </ul>
                                 <ul class="link-detalle" md-2>
                                     <a href="DetalleArticulo.aspx?id=<%#Eval("ArticuloId") %>">Ver Detalle</a>
