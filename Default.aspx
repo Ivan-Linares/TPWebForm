@@ -6,14 +6,14 @@
             <asp:Repeater runat="server" ID="Repetidor">
                 <ItemTemplate>
                     <div class="col">
-                        <div class="card">
+                        <div class="card" style="width: 28rem;">
                             <div class="card-body">
                                 <h5 class="card-title"><%#Eval("Nombre") %></h5>
-                                <img src="<%#Eval("URLImagen") %>" class="card-img-top" alt="Imagen URL" onerror="this.src='./Images/PlaceHolder.png';">
+                                <img src="<%#Eval("URLImagen") %>" class="card-img-top" alt="Imagen URL" onerror="this.src='./Images/PlaceHolder.png';" style="height:290px">
                                 <ul class="Descripcion-card">
                                     <p class="card-Precio">$<%#Eval("Precio") %></p> 
                                 </ul>
-                                <ul class="link-detalle" md-2>
+                                <ul class="link-detalle" cssclass="col-md-2">
                                     <a href="DetalleArticulo.aspx?id=<%#Eval("ArticuloId") %>">Ver Detalle</a>
                                     <asp:Button Text="Agregar a Carrito" runat="server" ID="btnComprar" CssClass="btn btn-primary" CommandArgument='<%#Eval("ArticuloId") %>' CommandName="ArticuloId" />
                                 </ul> 
