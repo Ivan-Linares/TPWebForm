@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Carrito.aspx.cs" Inherits="TPWebForms_Linares_Falduti.Carrito" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3>Monto total a pagar: <%: Session["MontoAPagar"] %></h3>
+    <div class="Pagos" id="Pagos">   
+    <h3> Monto total a pagar: <%: Session["MontoAPagar"] %></h3>
+    </div>
     <div class="Contenedor">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <asp:Repeater runat="server" ID="Repetidor">

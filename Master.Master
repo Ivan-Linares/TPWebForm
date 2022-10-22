@@ -9,6 +9,7 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <script src="Script/bootstrap.js"></script>
     <link href="Stilos/stilos.css" rel="stylesheet" >
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
 </head>
 <body  >
     <form id="form1" runat="server">
@@ -26,7 +27,7 @@
                             </li>
                         </ul>
                         <div class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Filtro">
+                            <input class="form-control me-2" type="search" placeholder="Filtro" aria-label="Filtro">
                             <button class="btn btn-outline-success" type="submit">Filtro</button>
                         </div>
                     </div>
