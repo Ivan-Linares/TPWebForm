@@ -11,25 +11,36 @@ namespace WebForms
 {
     public partial class DetalleArticulo : System.Web.UI.Page
     {
-        Articulo Elegido = new Articulo();
         public List<Articulo> ListaArticulos { get; set; }
+
+        public int IDArticulo;
+        public string NombreArticulo;
+        public string DescripcionArticulo;
+        public string CategoriaArticulo;
+        public string MarcaArticulo;
+        public string ImagenArticulo;
+        public decimal PrecioArticulo;
         protected void Page_Load(object sender, EventArgs e)
         {
-
             Articulo_Negocio ArticuloNegocio = new Articulo_Negocio();
             ListaArticulos = ArticuloNegocio.ListarArticulos();
-            string id = Request.QueryString["id"] != null ? Request.QueryString["id"].ToString() : "";
 
+            string id = Request.QueryString["id"] != null ? Request.QueryString["id"].ToString() : "";
             int IdArt = Int32.Parse(Request.QueryString["id"]);
+
             foreach (Articulo articulo in ListaArticulos)
             {
                 if (articulo.ArticuloId == IdArt)
                 {
-                    Elegido = articulo;
-                }
+                    IDArticulo = articulo.ArticuloId;
+                    NombreArticulo = articulo.Nombre;
+                    DescripcionArticulo = articulo.Descripcion;
+                    CategoriaArticulo = articulo.Categoria.ToString();
+                    MarcaArticulo = articulo.Marca.ToString();
+                    ImagenArticulo = articulo.URLImagen;
+                    PrecioArticulo = articulo.Precio;
+                }      
             }
-
         }
-
     }
 }
