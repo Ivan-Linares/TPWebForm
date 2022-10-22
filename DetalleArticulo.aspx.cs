@@ -25,8 +25,18 @@ namespace WebForms
             Articulo_Negocio ArticuloNegocio = new Articulo_Negocio();
             ListaArticulos = ArticuloNegocio.ListarArticulos();
 
-            string id = Request.QueryString["id"] != null ? Request.QueryString["id"].ToString() : "";
-            int IdArt = Int32.Parse(Request.QueryString["id"]);
+            string id;
+            int IdArt;
+            try
+            {
+                id = Request.QueryString["id"] != null ? Request.QueryString["id"].ToString() : "";
+                IdArt = Int32.Parse(Request.QueryString["id"]);
+            }
+            catch (Exception ex)
+            {
+                id = " ";
+                IdArt = 0;
+            }
 
             foreach (Articulo articulo in ListaArticulos)
             {
