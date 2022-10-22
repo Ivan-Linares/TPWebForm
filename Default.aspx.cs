@@ -28,16 +28,25 @@ namespace TPWebForms_Linares_Falduti
 
         protected void btnComprar_Click(object sender, EventArgs e)
         {
-            string ID = ((Button)sender).CommandArgument.ToString();
+            if (!(Session["ListaCarrito"] is null))
+                ListaCarrito = (List<Articulo>)Session["ListaCarrito"];
 
+            string ID = ((Button)sender).CommandArgument.ToString();
             foreach (Articulo articulo in ListaArticulos)
             {
                 if (articulo.ArticuloId == int.Parse(ID))
                     ListaCarrito.Add(articulo);
             }
 
+            decimal MontoTot = 0;
+            foreach (Articulo articulo in ListaCarrito)
+            {
+                MontoTot += articulo.Precio;
+            }
+
             Session.Clear();
-            Session.Add("ListaCarrito",ListaCarrito);
+            Session.Add("ListaCarrito", ListaCarrito);
+            Session.Add("MontoAPagar", MontoTot);
         }
     }
 }
