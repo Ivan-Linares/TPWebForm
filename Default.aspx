@@ -15,7 +15,7 @@
                                 </ul>
                                 <ul class="link-detalle" cssclass="col-md-2">
                                     <a href="DetalleArticulo.aspx?id=<%#Eval("ArticuloId") %>">Ver Detalle</a>
-                                    <asp:Button Text="Agregar a Carrito" runat="server" ID="btnComprar" CssClass="btn btn-primary" CommandArgument='<%#Eval("ArticuloId") %>' CommandName="ArticuloId" />
+                                    <asp:Button Text="Agregar a Carrito" runat="server" ID="btnComprar" CssClass="btn btn-primary" CommandArgument='<%#Eval("ArticuloId") %>' CommandName="ArticuloId" OnClick="btnComprar_Click"/>
                                 </ul> 
                             </div>
                         </div>
