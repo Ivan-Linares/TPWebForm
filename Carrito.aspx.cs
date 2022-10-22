@@ -14,7 +14,13 @@ namespace TPWebForms_Linares_Falduti
         public List<Articulo> ListaArticulos { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            ListaArticulos = (List<Articulo>)Session["ListaCarrito"];
+
+            if (!IsPostBack)
+            {
+                Repetidor.DataSource = ListaArticulos;
+                Repetidor.DataBind();
+            }
         }
     }
 }

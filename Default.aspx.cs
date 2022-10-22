@@ -13,7 +13,7 @@ namespace TPWebForms_Linares_Falduti
     {
         public List<Articulo> ListaArticulos { get; set; }
 
-        public List<Articulo> ListaCarrito { get; set; }
+        public List<Articulo> ListaCarrito = new List<Articulo>();
         protected void Page_Load(object sender, EventArgs e)
         {
             Articulo_Negocio ArticuloNegocio = new Articulo_Negocio();
@@ -32,12 +32,11 @@ namespace TPWebForms_Linares_Falduti
 
             foreach (Articulo articulo in ListaArticulos)
             {
-                if(articulo.ArticuloId == int.Parse(ID))
-                {
+                if (articulo.ArticuloId == int.Parse(ID))
                     ListaCarrito.Add(articulo);
-                }
             }
 
+            Session.Clear();
             Session.Add("ListaCarrito",ListaCarrito);
         }
     }
