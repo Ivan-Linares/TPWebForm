@@ -38,8 +38,8 @@ namespace Reglas_Negocio
                     obj.Categoria.CategoriaId = DataBase.Lector.GetInt32(6);
                     obj.Categoria.Descripcion = DataBase.Lector.GetString(7);
 
+                    if(!(DataBase.Lector.GetString(8) is null))
                     obj.URLImagen = DataBase.Lector.GetString(8);
-                    
                     
                     obj.Precio = DataBase.Lector.GetDecimal(9);
 

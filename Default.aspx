@@ -9,7 +9,7 @@
                         <div class="card" style="width: 28rem;">
                             <div class="card-body">
                                 <h5 class="card-title"><%#Eval("Nombre") %></h5>
-                                <img src="<%#Eval("URLImagen") %>" class="card-img-top" alt="Imagen URL" onerror="this.src='./Images/PlaceHolder.png';" style="height:290px">
+                                <img src="<%#Eval("URLImagen") %>" class="card-img-top" alt="Imagen URL" onerror="this.src='./Images/PlaceHolder.png';" style="width: 26rem; height: 25rem">
                                 <ul class="Descripcion-card">
                                     <p class="card-Precio">$<%#Eval("Precio") %></p> 
                                 </ul>
