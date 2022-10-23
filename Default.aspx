@@ -27,25 +27,6 @@
                 </ItemTemplate>
             </asp:Repeater>
         </div>
-
-
-        <div class="Seccion_Contacto" id="Seccion_Contacto">
-            <div class="contact-heading">
-                <h2>Contacto</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="Contacto">
-                <div class="Contacto_form">
-                    <h4>Enviame un mensaje...</h4>
-                    <div class="Formulario">
-                        <input type="email" placeholder="Email" class="Aporte">
-                        <input type="text" placeholder="Nombre" class="Aporte">
-                        <textarea name="Mensaje" placeholder="Escriba su mensaje aqui.."></textarea>
-                        <button type="submit" class="btn_enviar">Enviar Mensaje</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </asp:Content>
 

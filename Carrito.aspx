@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="Contenedor-Carrito">
+   
         <div class="Pagos">
             <h3 style="color: #ffffff; font-size: 55px; font-family: 'Bodoni MT'; text-align: right">Monto total a pagar: <%: MontoPagar %> </h3>
         </div>
@@ -29,6 +29,6 @@
                 </asp:Repeater>
             </div>
         </div>
-    </div>
+   
         
 </asp:Content>
