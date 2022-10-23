@@ -70,8 +70,8 @@
 
 
 
-.Pagos h3 {
-    color: teal;
+.Pagos  {
+    color: #ffffff;
     font-weight: normal;
     font-size: 30px;
     font-family: Arial;
@@ -86,7 +86,7 @@
     z-index: 1;
 }
 
-eccion_Contacto {
+.seccion_Contacto {
     padding: 3em;
 }
 
@@ -179,5 +179,12 @@ eccion_Contacto {
     font-size: 3em;
     justify-content: center;
     align-items: flex-start;
+}
+
+
+.Contenedor-Carrito {
+    width: 200vw;
+    height: 100vh;
+    background-color: #191c32;
 }
 

@@ -36,7 +36,7 @@
             </div>
             <div class="Contacto">
                 <div class="Contacto_form">
-                    <h4 >Enviame un mensaje...</h4>
+                    <h4>Enviame un mensaje...</h4>
                     <div class="Formulario">
                         <input type="email" placeholder="Email" class="Aporte">
                         <input type="text" placeholder="Nombre" class="Aporte">
@@ -46,20 +46,6 @@
                 </div>
             </div>
         </div>
-
-
-
-        <footer class="footer">
-            <div class="footer_contenido">
-                <h2>Matias Falduti - Santiago Linares</h2>
-                <h5>Trabajo Practico Carrito</h5>
-            </div>
-            <div class="Redes">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-twitter-square"></i>
-            </div>
-        </footer>
     </div>
 </asp:Content>
 
