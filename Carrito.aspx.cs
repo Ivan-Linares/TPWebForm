@@ -12,7 +12,7 @@ namespace TPWebForms_Linares_Falduti
     public partial class Carrito : System.Web.UI.Page
     {
         public List<Articulo> ListaArticulos { get; set; }
-        public decimal MontoPagar;
+        public decimal Monto;
         protected void Page_Load(object sender, EventArgs e)
         {
             Cargar();
@@ -20,9 +20,21 @@ namespace TPWebForms_Linares_Falduti
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            ActualizarCarrito(sender);
-            ActualizarMonto();
-            Mostrar();
+            string ID = ((Button)sender).CommandArgument.ToString();
+            foreach (Articulo articulo in ListaArticulos)
+            {
+                if (articulo.ArticuloId == int.Parse(ID))
+                {
+                    ListaArticulos.Remove(articulo);
+                   
+                    Session.Clear();
+                    Session.Add("ListaCarrito", ListaArticulos);
+                   
+                    break;
+                }     
+            }
+
+            Cargar();
         }
 
         private void Cargar()
@@ -31,45 +43,9 @@ namespace TPWebForms_Linares_Falduti
 
             if (!IsPostBack)
             {
-                if (!(Session["MontoAPagar"] is null))
-                    MontoPagar = (decimal)Session["MontoAPagar"];
-                else MontoPagar = 0;
-           
-            Repetidor.DataSource = ListaArticulos;
-            Repetidor.DataBind();
+                Repetidor.DataSource = ListaArticulos;
+                Repetidor.DataBind();
             }
-        }
-
-        private void ActualizarCarrito(object sender)
-        {
-            string ID = ((Button)sender).CommandArgument.ToString();
-            foreach (Articulo articulo in ListaArticulos)
-            {
-                if (articulo.ArticuloId == int.Parse(ID))
-                {
-                    ListaArticulos.Remove(articulo);
-
-                    Session.Clear();
-                    Session.Add("ListaCarrito", ListaArticulos);
-
-                    break;
-                }
-            }
-        }
-
-        private void ActualizarMonto()
-        {
-            MontoPagar = 0;
-            foreach (Articulo articulo in ListaArticulos)
-            {
-                MontoPagar += articulo.Precio;
-            }
-        }
-
-        private void Mostrar()
-        {
-            Repetidor.DataSource = ListaArticulos;
-            Repetidor.DataBind();
         }
     }
 }

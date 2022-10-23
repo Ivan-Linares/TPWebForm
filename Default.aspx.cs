@@ -12,22 +12,9 @@ namespace TPWebForms_Linares_Falduti
     public partial class WebForm1 : System.Web.UI.Page
     {
         public List<Articulo> ListaArticulos { get; set; }
-        public decimal MontoTot;
 
         public List<Articulo> ListaCarrito = new List<Articulo>();
         protected void Page_Load(object sender, EventArgs e)
-        {
-            Cargar();
-        }
-
-        protected void btnComprar_Click(object sender, EventArgs e)
-        {
-            AgrearCarrito(sender);
-            AgregarMonto();
-            EnviarSession();
-        }
-
-        private void Cargar()
         {
             Articulo_Negocio ArticuloNegocio = new Articulo_Negocio();
             ListaArticulos = ArticuloNegocio.ListarArticulos();
@@ -39,7 +26,7 @@ namespace TPWebForms_Linares_Falduti
             }
         }
 
-        private void AgrearCarrito(object sender)
+        protected void btnComprar_Click(object sender, EventArgs e)
         {
             if (!(Session["ListaCarrito"] is null))
                 ListaCarrito = (List<Articulo>)Session["ListaCarrito"];
@@ -50,19 +37,13 @@ namespace TPWebForms_Linares_Falduti
                 if (articulo.ArticuloId == int.Parse(ID))
                     ListaCarrito.Add(articulo);
             }
-        }
 
-        private void AgregarMonto()
-        {
-            MontoTot = 0;
+            decimal MontoTot = 0;
             foreach (Articulo articulo in ListaCarrito)
             {
                 MontoTot += articulo.Precio;
             }
-        }
 
-        private void EnviarSession()
-        {
             Session.Clear();
             Session.Add("ListaCarrito", ListaCarrito);
             Session.Add("MontoAPagar", MontoTot);

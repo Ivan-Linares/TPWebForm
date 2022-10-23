@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="Pagos" id="Pagos">   
-    <h3> Monto total a pagar: <%: MontoPagar %></h3>
+    <h3> Monto total a pagar: <%: Session["MontoAPagar"] %></h3>
     </div>
     <div class="Contenedor">
         <div class="row row-cols-1 row-cols-md-3 g-4">
